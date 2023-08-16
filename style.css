@@ -7,11 +7,19 @@
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
 }
 
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -34,6 +42,7 @@ body * {
   /* height: 712px; */
   margin: 56px auto 0px;
   padding: 0 24px;
+  /* border: 1px solid red; */
 }
 
 #profile {
@@ -69,8 +78,8 @@ ul li a {
   padding: 16px 24px;
 
   border-radius: 8px;
-  border: 1px solid var(--stroke-color-dark-mode, rgba(255, 255, 255, 0.5));
-  background: var(--surface-color-dark-mode, rgba(255, 255, 255, 0.1));
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
@@ -81,10 +90,20 @@ ul li a {
 }
 
 ul li a:hover {
-  border: 1.5px solid var(--text-color-dark-mode, #fff);
-  background: var(--surface-color-dark-mode-hover, rgba(255, 255, 255, 0.05));
+  border: 1.5px solid var(--text-color);
+  background: var(--surface-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+}
+
+/* Switch Dark Light Mode. */
+#switch {
+  display: flex;
+  justify-content: center;
+}
+
+#dev-links {
+  padding: 24px 0;
 }
 
 #social-links {
@@ -108,7 +127,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--surface-color-hover);
 }
 
 footer {
