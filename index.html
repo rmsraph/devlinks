@@ -12,25 +12,25 @@
     <title>Projeto</title>
 
     <link rel="stylesheet" href="style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-      body {
-        font-family: Ubuntu !important;
-      }
-    </style>
   </head>
   <body>
     <div id="container">
       <div id="profile">
-        <img src="assets/avatar.png" alt="" />
+        <img src="./assets/avatar-light.png" alt="Uma Imagem em Light" />
         <p>@rmsraph</p>
       </div>
-      <ul>
-        <li><a href="#">Lorem, ipsum dolor.</a></li>
-        <li><a href="#">Eaque, nesciunt sapiente.</a></li>
-        <li><a href="#">Sint, fuga iure.</a></li>
-        <li><a href="#">Commodi, ab quod.</a></li>
-      </ul>
+      <div id="switch">
+        <button></button>
+        <span></span>
+      </div>
+      <div id="dev-links">
+        <ul>
+          <li><a href="#">Lorem, ipsum dolor.</a></li>
+          <li><a href="#">Eaque, nesciunt sapiente.</a></li>
+          <li><a href="#">Sint, fuga iure.</a></li>
+          <li><a href="#">Commodi, ab quod.</a></li>
+        </ul>
+      </div>
       <div id="social-links">
         <a href="http://" target="_blank" rel="noopener noreferrer">
           <ion-icon name="logo-github"></ion-icon>
@@ -64,5 +64,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
