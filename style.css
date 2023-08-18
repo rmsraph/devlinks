@@ -6,12 +6,14 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-mobile-dark.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
+
+  --element-padding: 24px;
 }
 
 .light {
@@ -25,14 +27,9 @@
 }
 
 body {
-  /* background-image: url("./assets/bg-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover; */
-
-  /* background: color source repear position/size */
+  /* background: color source repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body * {
@@ -50,7 +47,7 @@ body * {
 
 #profile {
   text-align: center;
-  padding: 24px;
+  padding: var(--element-padding) 0px;
 }
 
 #profile img {
@@ -63,6 +60,9 @@ body * {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 /* Switch Dark Light Mode. */
@@ -118,6 +118,7 @@ ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 16px 24px;
 
   border-radius: 8px;
@@ -140,13 +141,13 @@ ul li a:hover {
 }
 
 #dev-links {
-  padding: 24px 0;
+  padding: var(--element-padding) 0;
 }
 
 #social-links {
   display: flex;
   justify-content: center;
-  padding: 24px 0;
+  /* padding: var(--element-padding) 0; */
 
   font-size: 24px;
   /* width: 360px; */
@@ -161,6 +162,9 @@ ul li a:hover {
 
   transition: background 0.2s;
   border-radius: 50%;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 #social-links a:hover {
@@ -168,7 +172,7 @@ ul li a:hover {
 }
 
 footer {
-  padding: 24px 0;
+  padding: var(--element-padding) 0;
   text-align: center;
   font-size: 14px;
 }
@@ -177,7 +181,7 @@ footer {
 
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-url: url(./assets/bg-desktop-dark.jpg);
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
